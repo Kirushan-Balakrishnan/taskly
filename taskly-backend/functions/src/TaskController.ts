@@ -89,10 +89,11 @@ const updateEntry = async (req: Request, res: Response) => {
 
     const entryObject = {
       title: title || currentData.title,
-      text: description || currentData.description,
+      description: description || currentData.description,
       status: status || currentData.status,
       createdAt: currentData.createdAt,
       updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+      id: taskId,
     };
 
     await entry.set(entryObject).catch((error) => {
