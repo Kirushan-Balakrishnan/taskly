@@ -8,7 +8,9 @@ export const TaskManager = () => {
 
   return (
     <Col>
-      <Row style={{ display: "flex", justifyContent: "flex-end" }}>
+      <Row
+        style={{ display: "flex", justifyContent: "flex-end", padding: "1rem" }}
+      >
         <Button
           style={{ width: 200 }}
           color="primary"
